@@ -1,0 +1,25 @@
+{
+	"folders":
+	[
+		{
+			"name": "Barfcade",
+			"follow_symlinks": true,
+			"path": "ddr-alternate",
+			"file_exclude_patterns":
+                [
+                    "*.meta",
+                    "*.dll",
+                    "*.mdb"
+                ],
+            "folder_exclude_patterns":
+                [
+                    "Temp"
+                ]
+		}
+	],
+	"settings":
+    {
+        "tab_size": 4
+    },
+    "solution_file": "./ddr-alternate/ddr-alternate.sln"
+}
