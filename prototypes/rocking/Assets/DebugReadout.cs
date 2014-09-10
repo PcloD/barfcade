@@ -51,6 +51,25 @@ public class DebugReadout : MonoBehaviour {
 		}
 	}
 
+	[SerializeField]
+	private bool canBeRandomized = false;
+
+	[SerializeField]
+	private AnimationCurve randomDistribution;
+	public void RandomizeTarget() {
+		float v = randomDistribution.Evaluate(Random.value);
+		SetTarget(v, 2f);
+		Debug.Log("Randomizing: "+v.ToString());
+	}
+
+	void Update () {
+		if (canBeRandomized) {
+			if (Input.GetButtonDown("Fire1")) {
+				RandomizeTarget();
+			}
+		}
+	}
+
 	public void SetTarget (float goal, float range) {
 		target.position = GetPosOnBarFor(goal);
 		rightBar.position = GetPosOnBarFor(goal+range/2f);

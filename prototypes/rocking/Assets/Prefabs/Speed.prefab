@@ -236,6 +236,12 @@ MonoBehaviour:
   rightBar: {fileID: 400004}
   textMesh: {fileID: 10200000}
   highestValue: 150
+  canBeRandomized: 0
+  randomDistribution:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

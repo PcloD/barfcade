@@ -1,1 +1,1082 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"p",
+				"padding-top"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"mi",
+				"middleman-blog"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"bo",
+				"border-left"
+			],
+			[
+				"To",
+				"ToString()	string ToString()"
+			],
+			[
+				"Spri",
+				"SpriteRenderer	SpriteRenderer"
+			],
+			[
+				"Serial",
+				"SerializeField	SerializeField"
+			],
+			[
+				"Sp",
+				"Sprite	Sprite"
+			],
+			[
+				"un",
+				"insideUnitCircle	Vector2 insideUnitCircle"
+			],
+			[
+				"Wait",
+				"WaitForEndOfFrame	WaitForEndOfFrame"
+			],
+			[
+				"Ien",
+				"IEnumerator	IEnumerator"
+			],
+			[
+				"speed",
+				"interMenuNavigationSpeed	float interMenuNavigationSpeed"
+			],
+			[
+				"disa",
+				"isDisabled	bool isDisabled"
+			],
+			[
+				"D",
+				"Disable()	void Disable()"
+			],
+			[
+				"previou",
+				"previousIndex"
+			],
+			[
+				"pri",
+				"Prison	AlienAbility Prison"
+			],
+			[
+				"Pla",
+				"PlayerPrefs	PlayerPrefs"
+			],
+			[
+				"attat",
+				"attachmentPointIndex	attachmentPointIndex"
+			],
+			[
+				"sele",
+				"selectedMenuOption	MenuOption selectedMenuOption"
+			],
+			[
+				"C",
+				"color	Color color"
+			],
+			[
+				"Set",
+				"SetTransformXY(	void SetTransformXY(Vector2 vector)"
+			],
+			[
+				"Co",
+				"Count	int Count"
+			],
+			[
+				"radii",
+				"radiiSum	float radiiSum"
+			],
+			[
+				"Alterna",
+				"AlternatePhysicsBody"
+			],
+			[
+				"Trea",
+				"TreasureManager	TreasureManager"
+			],
+			[
+				"re",
+				"RemoveAt(	void RemoveAt(int index)"
+			],
+			[
+				"verlet",
+				"verletConstraints	List<IAlternatePhysicsConstraint> verletConstraints"
+			],
+			[
+				"DrawRay",
+				"DrawRay(	void DrawRay(Vector3 start, Vector3 dir, Color color, float duration)"
+			],
+			[
+				"Draw",
+				"DrawRay(	void DrawRay(Vector3 start, Vector3 dir, Color color, float duration)"
+			],
+			[
+				"Uni",
+				"UnityEngine	UnityEngine"
+			],
+			[
+				"loc",
+				"localScale	Vector3 localScale"
+			],
+			[
+				"lastM",
+				"lastMouseY	float lastMouseY"
+			],
+			[
+				"G",
+				"GetInterface()	T GetInterface()"
+			],
+			[
+				"c",
+				"collider	Collider2D collider"
+			],
+			[
+				"UI",
+				"UIMask	int UIMask"
+			],
+			[
+				"Layer",
+				"LayerMask	LayerMask"
+			],
+			[
+				"Unity",
+				"UnityConstants	UnityConstants"
+			],
+			[
+				"e",
+				"Evaluate(	float Evaluate(float time)"
+			],
+			[
+				"my",
+				"myTransform	Transform myTransform"
+			],
+			[
+				"fixe",
+				"fixedDeltaTime	float fixedDeltaTime"
+			],
+			[
+				"wit",
+				"wait	wait"
+			],
+			[
+				"Wai",
+				"WaitForFixedUpdate()	WaitForFixedUpdate()"
+			],
+			[
+				"IEnum",
+				"IEnumerator	IEnumerator"
+			],
+			[
+				"tr",
+				"transform	Transform transform"
+			],
+			[
+				"skel",
+				"skeletonAnimation	SkeletonAnimation skeletonAnimation"
+			],
+			[
+				"t",
+				"TreasureMask	int TreasureMask"
+			],
+			[
+				"Utils",
+				"GameObjectUtils	GameObjectUtils"
+			],
+			[
+				"Action",
+				"ActionDelegate	ActionDelegate"
+			],
+			[
+				"GetC",
+				"GetComponent()	T GetComponent()"
+			],
+			[
+				"se",
+				"secondaryVerticalDelegate	VerticalDelegate secondaryVerticalDelegate"
+			],
+			[
+				"tra",
+				"transform	Transform transform"
+			],
+			[
+				"F",
+				"fixedDeltaTime	float fixedDeltaTime"
+			],
+			[
+				"Tran",
+				"Transform	Transform"
+			],
+			[
+				"Cache",
+				"CacheVariables()	void CacheVariables()"
+			],
+			[
+				"Trans",
+				"Transition	Transition"
+			],
+			[
+				"trans",
+				"transition	transition"
+			],
+			[
+				"tran",
+				"transition	transition"
+			],
+			[
+				"Tra",
+				"Transition	Transition"
+			],
+			[
+				"Cl",
+				"Clamp01(	float Clamp01(float value)"
+			],
+			[
+				"Stop",
+				"StopCoroutine(	void StopCoroutine(IEnumerator routine)"
+			],
+			[
+				"Waitf",
+				"WaitForFixedUpdate	WaitForFixedUpdate"
+			],
+			[
+				"fi",
+				"fixedDeltaTime	float fixedDeltaTime"
+			],
+			[
+				"Start",
+				"StartCoroutine(	Coroutine StartCoroutine(IEnumerator routine)"
+			],
+			[
+				"sc",
+				"localScale	Vector3 localScale"
+			],
+			[
+				"Gam",
+				"GameObject	GameObject"
+			],
+			[
+				"cam",
+				"cameraGoal	Vector2 cameraGoal"
+			],
+			[
+				"dele",
+				"delegateLookup	Dictionary<Delegate, EventDelegate> delegateLookup"
+			],
+			[
+				"del",
+				"delegateLookup	Dictionary<Delegate, EventDelegate> delegateLookup"
+			],
+			[
+				"Ca",
+				"CarthageGames	CarthageGames"
+			],
+			[
+				"carriers.",
+				"carriers.Add"
+			],
+			[
+				"targ",
+				"targetDirection"
+			],
+			[
+				"tar",
+				"targetRigidbody"
+			],
+			[
+				"ta",
+				"targetRigidbody"
+			],
+			[
+				"tex",
+				"texW"
+			],
+			[
+				"font",
+				"fontSurf"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "ddr-alternate/Assets/DefenderManager.cs",
+			"settings":
+			{
+				"buffer_size": 1722,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ddr-alternate/Assets/TileFall.cs",
+			"settings":
+			{
+				"buffer_size": 290,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ddr-alternate/ProjectSettings/InputManager.asset",
+			"settings":
+			{
+				"buffer_size": 3229,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 287.0,
+		"selected_items":
+		[
+			[
+				"trail",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"unity",
+				"Set Syntax: Unity C#"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"gls",
+				"Set Syntax: GLSL"
+			],
+			[
+				"coin",
+				"Package Control: Install Package"
+			],
+			[
+				"trai",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"syntax un",
+				"Set Syntax: Unity C#"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"packages",
+				"Package Control: List Packages"
+			],
+			[
+				"json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"nim",
+				"Set Syntax: Nimrod"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"c#",
+				"Set Syntax: C#"
+			],
+			[
+				"line",
+				"Line Ending to all views: Unix"
+			]
+		],
+		"width": 476.0
+	},
+	"console":
+	{
+		"height": 174.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jceipek/Development/barfcade/prototypes/ddr-alternate",
+		"/Users/jceipek/Development/barfcade/prototypes/ddr-alternate/ProjectSettings"
+	],
+	"file_history":
+	[
+		"/Users/jceipek/Development/barfcade/prototypes/ddr-alternate/Assets/Test.unity",
+		"/Users/jceipek/Development/barfcade/.gitignore",
+		"/Users/jceipek/Development/tethered-space-pirates/.gitignore",
+		"/Users/jceipek/Development/thoughts/thoughts/source/2012-01-01-example-article.html.markdown",
+		"/Users/jceipek/Development/thoughts/thoughts/Gemfile",
+		"/Users/jceipek/Development/thoughts/thoughts/.gitignore",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Menu/GameEndField.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Prefabs/GameEntities/P_Menus.prefab",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Events/GameEndingEvent.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Library/guidmapper",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Input/Profiles/ArrowsProfile.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Input/Profiles/WASDProfile.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/WorldUpdateManager.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/RopeRenderer.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Textures/RammerBug/Atlas_Rammer.asset",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Library/AnnotationManager",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Demo.unity",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Menu/MenuOption.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Menu/MenuManager.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Library/ScriptMapper",
+		"/Users/jceipek/Development/tsp.sublime-project",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/DemoPiratePartySpawner.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Menu/Menu.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Menu/Actions/SwitchMenuAction.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Menu/Actions/RadioAction.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Library/AlternatePhysics/AlternatePhysicsSimulator.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Library/AlternatePhysics/AlternatePhysicsKeepApartConstraint.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Library/AlternatePhysics/AlternatePhysicsBody.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Library/AlternatePhysics/IAlternatePhysicsConstraint.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Library/Extensions/TransformExtensions.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/PiratePartySpawner.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/BugController.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Singletons/Events.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Input/MouseProfile.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/3rdParty/InControl/Library/InputManager.cs",
+		"/Users/jceipek/Dropbox/Resume/ResumeHtmlSmall/cv.css",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Input/Mapping.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Input/PlayerPirateController.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/3rdParty/InControl/Library/Device/InputDevice.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/3rdParty/InControl/Library/Unity/UnityInputDeviceProfile.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/3rdParty/InControl/Library/Unity/UnityInputDeviceManager.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/3rdParty/InControl/Library/Unity/UnityInputDevice.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Library/UnityConstants.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Abilities/MovementAbility.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/ProjectSettings/InputManager.asset",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Textures/GreenLady/Mat_Alien.mat",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Menu/Actions/StartAction.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Menu/RadioList.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/TreasureContainer.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Library/AlternatePhysics/AlternatePhysicsConstraint.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/ProjectSettings/Physics2DSettings.asset",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Prefabs/GameEntities/Background/P_HorseHeadNebula.prefab",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/PlayerPirateController.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Singletons/TreasureManager.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Prefabs/GameEntities/Robot Particles.prefab",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Sounds/rocket.wav",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Library/AlternatePhysics/AlternatePhysicsStayInCircleConstraint.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assembly-CSharp.csproj",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Prefabs/GameEntities/Kaboom.prefab",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/MenuActions/SelectAction.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Animation/PlayAnimAndPariclesOnMovement.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Interfaces/IHaveMenuAction.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/StickerController.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Prefabs/GameEntities/Background/P_OnionRingNebula.prefab",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Menu/Actions/BaseMenuAction.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/BasicTreasureIdentity.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Interfaces/ICanHoldTreasure.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/TongueSpawner.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/spine-csharp/src/SpineAnimation.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/tethered-space-pirates.sln",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/MenuActions/Menu.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Mapping.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/MenuManager.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Demo copy.unity",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assembly-CSharp-firstpass.csproj",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/spine-unity/Editor/BoneComponentInspector.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Textures/GreenLady/AlienLady.atlas.txt",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Interfaces/ICanAttach.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Interfaces/ICanBeCollected.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Library/AI/ContextMap.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Sounds/coin.wav",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/ImageManipulation/TextureRenderCamera.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/3rdParty/UnityToolbag/TimeScaleIndependentUpdate/TimeScaleIndependentUpdate.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Abilities/CollectTreasureAbility.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/spine-unity/SkeletonDataAsset.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/spine-unity/AtlasAsset.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/spine-csharp/src/SkeletonJson.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/MenuActions/StartAction.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/MenuActions/ExitAction.cs",
+		"/Users/jceipek/Development/UnityToolbag/TimeScaleIndependentUpdate/README.md",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/3rdParty/UnityToolbag/TimeScaleIndependentUpdate/TimeScaleIndependentAnimation.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/ProjectSettings/TimeManager.asset",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Library/FailedAssetImports.txt",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Library/expandedItems",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/spine-unity/Editor/Menus.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Test.unity",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assembly-UnityScript-Editor.unityproj",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Interfaces/ICanBeHeld.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Interfaces/ICanControlMovement.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Library/MonoManager.asset",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Animation/PlayerAnimations.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Library/ProjectSettings.asset",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/PlayerAnimationManager.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Library/Editor/SpineConstantsGenerator.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Textures/Robot/Robot.json",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Prefabs/GameEntities/P_Robot.prefab",
+		"/Users/jceipek/Development/InsanityJam2/.jshintrc",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Interfaces/ICanBeSlowed.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/ParallaxScroll.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/GenerateBackground.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/TargetUsingReticule.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Debugging/MemoryLeaks.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/CameraFollowBehavior.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Interfaces/ICanControlSecondaryMovement.cs",
+		"/Users/jceipek/Dropbox/ComputerFiles/launchd/com.jceipek.brewpackagelist.plist",
+		"/Users/jceipek/Dropbox/ComputerFiles/launchd/brew_installed_packages.sh",
+		"/Users/jceipek/Dropbox/ComputerFiles/brew_package_list",
+		"/Users/jceipek/Library/LaunchAgents/com.valvesoftware.steamclean.plist",
+		"/Users/jceipek/Library/LaunchAgents/com.jceipek.brewpackagelist",
+		"/Users/jceipek/debugHash/Assets/Show.cs",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/Assets/Scripts/Animation/PlayAnimOnMovement.cs",
+		"/Users/jceipek/Dropbox/iMac2/shells",
+		"/etc/shells",
+		"/Users/jceipek/.bash_history",
+		"/Users/jceipek/Development/tethered-space-pirates/tethered-space-pirates/ProjectSettings/TagManager.asset",
+		"/Users/jceipek/Dropbox/iMac2/config.fish",
+		"/Users/jceipek/.config/fish/fish_history",
+		"/Users/jceipek/.config/fish/fishd.7831c1c92da0"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+			"",
+			"/Users/jceipek/Development/nimrod-exploration/sdl2",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Dir.",
+			"private",
+			"AddKeyToQueue",
+			"Log",
+			"up",
+			"horiz",
+			"Kudeschoff",
+			"- ",
+			", ",
+			"alex",
+			"h1",
+			"thoughts",
+			",",
+			"\n",
+			" Alternate",
+			"Input",
+			"Input.GetButtonDown (",
+			"Input.GetAxisRaw (",
+			"string",
+			"collapsed-link",
+			"hi",
+			"sort",
+			"SortOrder",
+			"atta",
+			"AddListener",
+			"GameEvent",
+			"protected",
+			"CacheVariables",
+			"myTextMesh",
+			"private ",
+			"struct",
+			"Color",
+			" = Color.red",
+			"private",
+			"private struct",
+			"[SerializeField]",
+			"0.4f",
+			"RotateAround",
+			"newIndex",
+			"currentIndex",
+			"j",
+			"IsSelected",
+			"isSelected",
+			"deSelectedColor",
+			"pirateConfigurationList",
+			"P2",
+			"P1",
+			"Demo",
+			"MenuOptions",
+			"menuOptions",
+			"menuAction",
+			"menuOption",
+			"MenuOption",
+			"menuOption",
+			"menuAction",
+			"((MenuOption)selectedMenuOption)",
+			"IHaveMenuAction",
+			"selectedOptionIndex",
+			"hoveredMenuOption",
+			"HoverFirstOptionIfPossible",
+			"selectedOptionIndex",
+			"Mathf.Sin",
+			"Sin",
+			"myTransform",
+			"protected",
+			"Cache",
+			"public",
+			"Color.red",
+			"GetComponent<TextMesh> ()",
+			"value",
+			"</option>",
+			"abilitiesSelected",
+			"magiccoin",
+			"magicco",
+			"m_Name: P_Coin(Clone)\n  m_TagString: Untagged\n  m_Icon: {fileID: 0}\n  m_NavMeshLayer: 0\n  m_StaticEditorFlags: 0",
+			"MagicCoin",
+			"m_Layer: 15\n  m_Name: P_Coin(Clone)\n  m_TagString: Untagged\n  m_Icon: {fileID: 0}",
+			"coin",
+			"magic",
+			"  - 114: {fileID: 99485680}\n  m_Layer: 15\n  m_Name: P_Coin(Clone)\n  m_TagString: Untagged\n  m_Icon: {fileID: 0}\n  m_NavMeshLayer: 0\n  m_StaticEditorFlags: 0\n  m_IsActive: 1",
+			"P_Coin(Clone)",
+			"coin",
+			"magic",
+			"target",
+			"self",
+			"restingLength",
+			"verletConstraints",
+			"constraint",
+			"Constraint",
+			"constraint",
+			"Constraint",
+			"constraint",
+			"Constraint",
+			"constraint",
+			"Constraint",
+			"verletConstraints",
+			"target.myTransform",
+			"verletSticks",
+			"AlternatePhysicsConstraint",
+			"radius",
+			"transform",
+			"P_Dummy",
+			"P_DUMMY_coin",
+			"coin",
+			"TimeScaleIndependentWaitForSeconds",
+			" was saved!",
+			"ICanHoldTreasure",
+			"Collect",
+			"CreateAssetFor",
+			"Deserialize",
+			"i",
+			"GetF",
+			"i",
+			"AtlasAsset",
+			"SkeletonDataAsset",
+			"nearCoinPosition",
+			"hast",
+			"SlowFactor",
+			"ICanBeSlowed",
+			"PlayerEvaluator",
+			"UpdatePlayers",
+			"player\nplayer",
+			"player",
+			"CarthageGames.AI",
+			"AddObstacleAtPos",
+			"m_activeList",
+			"m_backgroundGrid",
+			"m_gridDims"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "ddr-alternate/Assets/DefenderManager.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1722,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								992,
+								992
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 401.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "ddr-alternate/Assets/TileFall.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "ddr-alternate/ProjectSettings/InputManager.asset",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3229,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2930,
+								2930
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "barfcade-ddr.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"tile",
+				"Assets/TileFall.cs"
+			],
+			[
+				"was",
+				"Assets/Scripts/Input/Profiles/WASDProfile.cs"
+			],
+			[
+				"arrows",
+				"Assets/Scripts/Input/Profiles/ArrowsProfile.cs"
+			],
+			[
+				"demopirates",
+				"Assets/Scripts/DemoPiratePartySpawner.cs"
+			],
+			[
+				"playerpi",
+				"Assets/Scripts/PlayerPirateController.cs"
+			],
+			[
+				"menum",
+				"Assets/Scripts/Menu/MenuManager.cs"
+			],
+			[
+				"star",
+				"Assets/Scripts/Menu/Actions/StartAction.cs"
+			],
+			[
+				"inputdevice",
+				"Assets/Scripts/3rdParty/InControl/Library/Device/InputDevice.cs"
+			],
+			[
+				"unityin",
+				"Assets/Scripts/3rdParty/InControl/Library/Unity/UnityInputDeviceProfile.cs"
+			],
+			[
+				"mouse",
+				"Assets/Scripts/Input/MouseProfile.cs"
+			],
+			[
+				"inputdev",
+				"Assets/Scripts/3rdParty/InControl/Library/Device/InputDevice.cs"
+			],
+			[
+				"input",
+				"Assets/Scripts/3rdParty/InControl/Library/InputManager.cs"
+			],
+			[
+				"mapping",
+				"Assets/Scripts/Input/Mapping.cs"
+			],
+			[
+				"physi",
+				"Assets/Scripts/Library/AlternatePhysics/AlternatePhysicsSimulator.cs"
+			],
+			[
+				"treas",
+				"Assets/Scripts/TreasureContainer.cs"
+			],
+			[
+				"rope",
+				"Assets/Scripts/RopeRenderer.cs"
+			],
+			[
+				"circle",
+				"Assets/Scripts/Library/AlternatePhysics/AlternatePhysicsStayInCircleConstraint.cs"
+			],
+			[
+				"kee",
+				"Assets/Scripts/Library/AlternatePhysics/AlternatePhysicsKeepApartConstraint.cs"
+			],
+			[
+				"altern",
+				"Assets/Scripts/Library/AlternatePhysics/AlternatePhysicsSimulator.cs"
+			],
+			[
+				"radi",
+				"Assets/Scripts/Menu/Actions/RadioAction.cs"
+			],
+			[
+				"menuop",
+				"Assets/Scripts/Menu/MenuOption.cs"
+			],
+			[
+				"start",
+				"Assets/Scripts/Menu/Actions/StartAction.cs"
+			],
+			[
+				"base",
+				"Assets/Scripts/Menu/Actions/BaseMenuAction.cs"
+			],
+			[
+				"iha",
+				"Assets/Scripts/Interfaces/IHaveMenuAction.cs"
+			],
+			[
+				"spawn",
+				"Assets/Scripts/PiratePartySpawner.cs"
+			],
+			[
+				"tran",
+				"Assets/Scripts/Library/Extensions/TransformExtensions.cs"
+			],
+			[
+				"men",
+				"Assets/Scripts/Menu/MenuManager.cs"
+			],
+			[
+				"alternatephy",
+				"Assets/Scripts/Library/AlternatePhysics/AlternatePhysicsConstraint.cs"
+			],
+			[
+				"alterna",
+				"Assets/Scripts/Library/AlternatePhysics/AlternatePhysicsSimulator.cs"
+			],
+			[
+				"ial",
+				"Assets/Scripts/Library/AlternatePhysics/IAlternatePhysicsConstraint.cs"
+			],
+			[
+				"constr",
+				"Assets/Scripts/Library/AlternatePhysics/AlternatePhysicsConstraint.cs"
+			],
+			[
+				"trea",
+				"Assets/Scripts/Singletons/TreasureManager.cs"
+			],
+			[
+				"time",
+				"Assets/Scripts/3rdParty/UnityToolbag/TimeScaleIndependentUpdate/TimeScaleIndependentUpdate.cs"
+			],
+			[
+				"exit",
+				"Assets/Scripts/MenuActions/ExitAction.cs"
+			],
+			[
+				"menu",
+				"Assets/Scripts/Interfaces/IHaveMenuAction.cs"
+			],
+			[
+				"unityc",
+				"Assets/Scripts/Library/UnityConstants.cs"
+			],
+			[
+				"ican",
+				"Assets/Scripts/Interfaces/ICanBeCollected.cs"
+			],
+			[
+				"movem",
+				"Assets/Scripts/Abilities/MovementAbility.cs"
+			],
+			[
+				"player",
+				"Assets/Scripts/PlayerPirateController.cs"
+			],
+			[
+				"icancon",
+				"Assets/Scripts/Interfaces/ICanControlMovement.cs"
+			],
+			[
+				"target",
+				"Assets/Scripts/TargetUsingReticule.cs"
+			],
+			[
+				"bug",
+				"Assets/Scripts/BugController.cs"
+			],
+			[
+				"mapp",
+				"Assets/Scripts/Mapping.cs"
+			],
+			[
+				"c",
+				"Capsule:"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 229.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
