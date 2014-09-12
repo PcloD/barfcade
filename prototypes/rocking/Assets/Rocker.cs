@@ -76,43 +76,106 @@ public class Rocker : MonoBehaviour {
 	}
 
 
-	private float speedAtBottom = 0f;
-	void FixedUpdate () {
-		var horiz = Input.GetAxisRaw("Horizontal");
-		if (invertRotation) horiz *= -1;
-		currRotationSpeed += horiz * rockingSpeed * Time.fixedDeltaTime;
+	private struct StepData
+	{
+		public float rotationSpeed;
+		public float rotation;
 
-		currRotationSpeed *= rotationFriction;
+		public StepData(float rotationSpeed, float rotation)
+		{
+			this.rotationSpeed = rotationSpeed;
+			this.rotation = rotation;
+		}
+	}
 
-		var delta = currRotation + rotationGravity * Time.fixedDeltaTime;
+	private StepData SimulateStep (StepData initialStepData, float timeStep) {
+
+		StepData result = new StepData(initialStepData.rotationSpeed, initialStepData.rotation);
+
+		result.rotationSpeed *= rotationFriction;
+
+		var delta = result.rotation + rotationGravity * timeStep;
 
 		// Right Bottom
 		if (delta >= 0f && delta < lbMaxAngle) {
 			var heightFraction = (delta/lbMaxAngle);
-			currRotationSpeed -= rotationGravity * rotationGravityCurve.Evaluate(heightFraction) * Time.fixedDeltaTime;
+			result.rotationSpeed -= rotationGravity * rotationGravityCurve.Evaluate(heightFraction) * timeStep;
 		}
 
 		// Top Left
 		if (delta > 180f && delta < 360f - lbMaxAngle) {
 			var heightFraction = (delta - 180f)/((360f - lbMaxAngle) - 180f);
-			currRotationSpeed -= rotationGravity * rotationGravityCurve.Evaluate(heightFraction) * Time.fixedDeltaTime;
+			result.rotationSpeed -= rotationGravity * rotationGravityCurve.Evaluate(heightFraction) * timeStep;
 		}
 
-
-		delta = currRotation - rotationGravity * Time.fixedDeltaTime;
+		delta = result.rotation - rotationGravity * timeStep;
 		// Left Bottom
 		if (delta > 360f - lbMaxAngle && delta < 360f) {
 			var heightFraction = 1f - (delta - (360f - lbMaxAngle))/(360f - (360f - lbMaxAngle));
-			currRotationSpeed += rotationGravity * rotationGravityCurve.Evaluate(heightFraction) * Time.fixedDeltaTime;
+			result.rotationSpeed += rotationGravity * rotationGravityCurve.Evaluate(heightFraction) * timeStep;
 		}
 
 		// Top Right
 		if (delta > lbMaxAngle && delta < 180f) {
 			var heightFraction = 1f - (delta - lbMaxAngle)/(180f - lbMaxAngle);
-			currRotationSpeed += rotationGravity * rotationGravityCurve.Evaluate(heightFraction) * Time.fixedDeltaTime;
+			result.rotationSpeed += rotationGravity * rotationGravityCurve.Evaluate(heightFraction) * timeStep;
 		}
 
-		currRotationSpeed = Mathf.Clamp(currRotationSpeed, -maxRotSpeed, maxRotSpeed);
+		result.rotationSpeed = Mathf.Clamp(result.rotationSpeed, -maxRotSpeed, maxRotSpeed);
+
+		result.rotation += result.rotationSpeed * Time.fixedDeltaTime;
+		result.rotation = Mathf.Repeat(result.rotation, 360);
+
+		return result;
+	}
+
+	private bool Predict(out float predictedPeak, float horiz) {
+		predictedPeak = 0f;
+		StepData simData = new StepData(currRotationSpeed, currRotation);
+		StepData lastSimData = new StepData(currRotationSpeed, currRotation);
+
+		for (float t = 0f; t < 40f; t += Time.fixedDeltaTime) {
+			float speedUpDir = Mathf.Sign(simData.rotation - lastSimData.rotation);
+			simData.rotationSpeed += horiz * speedUpDir * rockingSpeed * Time.fixedDeltaTime;
+			simData = SimulateStep(simData, Time.fixedDeltaTime);
+			if (Mathf.Sign(simData.rotationSpeed) != Mathf.Sign(lastSimData.rotationSpeed)) {
+				if (simData.rotation > 180f) {
+					predictedPeak = 360f-simData.rotation;
+				} else {
+					predictedPeak = simData.rotation;
+				}
+				return true;
+			}
+			lastSimData = new StepData(simData.rotationSpeed, simData.rotation);
+		}
+		return false;
+	}
+
+	private float speedAtBottom = 0f;
+	void FixedUpdate () {
+		var horiz = Input.GetAxisRaw("Horizontal");
+		if (invertRotation) horiz *= -1;
+
+		currRotationSpeed += horiz * rockingSpeed * Time.fixedDeltaTime;
+
+		StepData result = SimulateStep(new StepData(currRotationSpeed, currRotation), Time.fixedDeltaTime);
+		currRotationSpeed = result.rotationSpeed;
+		currRotation = result.rotation;
+
+		float minPrediction = 0f;
+		float neutPrediction = 0f;
+		float maxPrediction = 0f;
+
+		if (Predict(out minPrediction, -1f) && Predict(out neutPrediction, 0f) && Predict(out maxPrediction, 1f)) {
+			float avgMetric = (minPrediction + neutPrediction + maxPrediction)/3f;
+			bgVisualizer.SetTime(avgMetric);
+			bgVisualizer.SetFreqTime(avgMetric);
+			// Debug.Log("Predicted Min: "+ minPrediction.ToString());
+			// Debug.Log("Predicted Neutral: "+ neutPrediction.ToString());
+			// Debug.Log("Predicted Max: "+ maxPrediction.ToString());
+		}
+
+		var delta = currRotation - rotationGravity * Time.fixedDeltaTime;
 
 		timer += Time.fixedDeltaTime;
 
@@ -146,21 +209,14 @@ public class Rocker : MonoBehaviour {
 
 			speedAtBottom = currRotationSpeed;
 
-			bgVisualizer.SetTime(Mathf.Abs(timer*10f));
+			// bgVisualizer.SetTime(Mathf.Abs(timer*10f));
 			timer = 0f;
 
 			measuredLeftHeight = false;
 			measuredRightHeight = false;
 		}
 
-
-		// Attempting to predict speed at angle:
-		
-
-		bgVisualizer.SetFreqTime(Mathf.Abs(timer*10f));
-
-		currRotation += currRotationSpeed * Time.fixedDeltaTime;
-		currRotation = Mathf.Repeat(currRotation, 360);
+		// bgVisualizer.SetFreqTime(Mathf.Abs(timer*10f));
 
 		Quaternion targetRotation = Quaternion.Euler(0, 0, currRotation);
 		myTransform.rotation = targetRotation;

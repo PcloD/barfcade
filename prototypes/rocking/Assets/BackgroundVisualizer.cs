@@ -62,34 +62,34 @@ public class BackgroundVisualizer : MonoBehaviour {
 	private void CheckHeight () {
 		if (heightMetric > maximumHeight) {
 			target -= heightPenalty;
-			Debug.Log("Height too high");
+			// Debug.Log("Height too high");
 		}
 	}
 
 	private void CheckFreqTime () {
-		if ((freqTimeMetric > tooHighTime) &&
-			target - timePenalty >= 0f) {
-			target -= timePenalty;
-			Debug.Log("Freq Time Far Too High, go neutral");
-		}
+		// if ((freqTimeMetric > tooHighTime) &&
+		// 	target - timePenalty >= 0f) {
+		// 	target -= timePenalty;
+		// 	// Debug.Log("Freq Time Far Too High, go neutral");
+		// }
 	}
 
 	private void CheckTime () {
 		if (timeMetric > 1f && timeMetric < desiredTime - temporalRange/2f) {
 			// target -= timePenalty;
-			// Debug.Log("Time too low");
+			//// Debug.Log("Time too low");
 		}
 
 		if (((timeMetric > desiredTime + temporalRange/2f)) ){ //&&
 			// target - timePenalty >= 0f) {
 			target -= timePenalty;
-			Debug.Log("Time Too High, go neutral");
+			// Debug.Log("Time Too High, go neutral");
 		}
 
 		if (((timeMetric < desiredTime - temporalRange/2f)) &&
 			target - timePenalty >= 0f) {
 			target -= timePenalty;
-			Debug.Log("Time Too Low, go neutral");
+			// Debug.Log("Time Too Low, go neutral");
 		}
 
 		if (timeMetric >= desiredTime - temporalRange/2f &&
