@@ -82,6 +82,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 50438601}
+  - 114: {fileID: 50438602}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -105,6 +106,21 @@ Transform:
   - {fileID: 1557622818}
   m_Father: {fileID: 2044663086}
   m_RootOrder: 3
+--- !u!114 &50438602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 50438600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f2ebfee90ff481f82a4e8c435adda9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuCamera: {fileID: 1730693402}
+  rockingTacos:
+  - {fileID: 1194508186}
+  - {fileID: 1972588511}
 --- !u!1 &98399332
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +378,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 431344195}
   m_Layer: 0
-  m_Name: TacoContainer
+  m_Name: LeftTacoContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1598,6 +1614,14 @@ Prefab:
       propertyPath: bgVisualizer
       value: 
       objectReference: {fileID: 1538019609}
+    - target: {fileID: 100000, guid: 4a358307f175b4e7a90a954635383784, type: 2}
+      propertyPath: m_Name
+      value: RightTacoContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4a358307f175b4e7a90a954635383784, type: 2}
+      propertyPath: controlAxis
+      value: Horizontal_right
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a358307f175b4e7a90a954635383784, type: 2}
   m_RootGameObject: {fileID: 1723312457}
@@ -1733,6 +1757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4b0cb1a7309485e905632a08bfe662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controlAxis: Horizontal_right
   shrimpSpawnLocation: {fileID: 2097716848}
   shrimpPrefab: {fileID: 100002, guid: 35d5a3990c80b4cf79922bb02d72ab5d, type: 2}
   invertRotation: 0
@@ -2821,7 +2846,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1723312458}
   m_Layer: 0
-  m_Name: TacoContainer
+  m_Name: RightTacoContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2850,8 +2875,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1730693398}
   - 20: {fileID: 1730693402}
-  - 92: {fileID: 1730693401}
-  - 124: {fileID: 1730693400}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: Untagged
@@ -2871,22 +2894,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2044663086}
   m_RootOrder: 4
---- !u!124 &1730693400
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 12400000, guid: 062dae2cf93ec4724bebb25cd9f3d629,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1730693397}
-  m_Enabled: 1
---- !u!92 &1730693401
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9200000, guid: 062dae2cf93ec4724bebb25cd9f3d629,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1730693397}
-  m_Enabled: 1
 --- !u!20 &1730693402
 Camera:
   m_ObjectHideFlags: 0
@@ -3022,6 +3029,14 @@ Prefab:
       propertyPath: bgVisualizer
       value: 
       objectReference: {fileID: 1538019609}
+    - target: {fileID: 100000, guid: 4a358307f175b4e7a90a954635383784, type: 2}
+      propertyPath: m_Name
+      value: LeftTacoContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4a358307f175b4e7a90a954635383784, type: 2}
+      propertyPath: controlAxis
+      value: Horizontal_left
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a358307f175b4e7a90a954635383784, type: 2}
   m_RootGameObject: {fileID: 431344194}
@@ -3171,6 +3186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4b0cb1a7309485e905632a08bfe662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controlAxis: Horizontal_left
   shrimpSpawnLocation: {fileID: 1403612031}
   shrimpPrefab: {fileID: 100002, guid: 35d5a3990c80b4cf79922bb02d72ab5d, type: 2}
   invertRotation: 0

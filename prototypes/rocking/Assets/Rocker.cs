@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Rocker : MonoBehaviour {
 	[SerializeField]
+	private string controlAxis;
+
+	[SerializeField]
 	private Transform shrimpSpawnLocation;
 
 	[SerializeField]
@@ -157,7 +160,7 @@ public class Rocker : MonoBehaviour {
 
 	private float speedAtBottom = 0f;
 	void FixedUpdate () {
-		var horiz = Input.GetAxisRaw("Horizontal");
+		var horiz = Input.GetAxisRaw(controlAxis);
 		if (invertRotation) horiz *= -1;
 
 		currRotationSpeed += horiz * rockingSpeed * Time.fixedDeltaTime;

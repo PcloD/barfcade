@@ -11,7 +11,9 @@ public class KeepInCameraMiddle : MonoBehaviour {
 
 
 	void Update () {
-		Vector3 center = mainCamera.ScreenToWorldPoint( new Vector3(Screen.width/4 + Screen.width * myCamera.rect.x, Screen.height/2, myCamera.nearClipPlane) );
-		transform.position = new Vector3(center.x,transform.position.y, transform.position.z);
+		if (mainCamera != null) {
+			Vector3 center = mainCamera.ScreenToWorldPoint( new Vector3(Screen.width/4 + Screen.width * myCamera.rect.x, Screen.height/2, myCamera.nearClipPlane) );
+			transform.position = new Vector3(center.x,transform.position.y, transform.position.z);
+		}
 	}
 }
