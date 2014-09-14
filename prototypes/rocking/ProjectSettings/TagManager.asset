@@ -41,3 +41,15 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
+  - name: Fg
+    userID: 3
+    uniqueID: 1552025411
+    locked: 0
+  - name: UI
+    userID: 1
+    uniqueID: 2329633371
+    locked: 0
+  - name: Menu
+    userID: 2
+    uniqueID: 237885301
+    locked: 0

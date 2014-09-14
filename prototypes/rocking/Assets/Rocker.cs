@@ -3,6 +3,12 @@ using System.Collections;
 
 public class Rocker : MonoBehaviour {
 	[SerializeField]
+	private Transform shrimpSpawnLocation;
+
+	[SerializeField]
+	private GameObject shrimpPrefab;
+
+	[SerializeField]
 	private bool invertRotation = true;
 
 	[SerializeField]
@@ -32,16 +38,14 @@ public class Rocker : MonoBehaviour {
 	[SerializeField]
 	private BackgroundVisualizer bgVisualizer;
 
+	private Transform shrimpTransform;
+
 	// Cache Variables
 	private Transform myTransform;
 
 	void OnEnable () {
 		myTransform = transform;
 		// speedReadout.HighestValue = maxRotSpeed;
-	}
-
-	void OnValidate () {
-		// if (speedReadout != null) speedReadout.HighestValue = maxRotSpeed;
 	}
 
 	private bool measuredLeftHeight = false;
@@ -220,5 +224,13 @@ public class Rocker : MonoBehaviour {
 
 		Quaternion targetRotation = Quaternion.Euler(0, 0, currRotation);
 		myTransform.rotation = targetRotation;
+	}
+
+	public void StartGame() {
+
+	}
+
+	public void SpawnShrimp() {
+		Instantiate(shrimpPrefab, shrimpSpawnLocation.position, Quaternion.identity);
 	}
 }

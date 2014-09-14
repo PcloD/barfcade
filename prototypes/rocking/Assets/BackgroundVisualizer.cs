@@ -12,6 +12,9 @@ public class BackgroundVisualizer : MonoBehaviour {
 	private AnimationCurve temporalDistribution;
 
 	[SerializeField]
+	private float visualizationRange = 15f;
+
+	[SerializeField]
 	private float desiredTime = 15f;
 
 	[SerializeField]
@@ -120,22 +123,28 @@ public class BackgroundVisualizer : MonoBehaviour {
 	[SerializeField]
 	private float neutralFrictionFactor = 0.8f;
 	private void FixedUpdate () {
-		// Debug.Log("GoodnessChange: "+(Mathf.Sign(target - goodness) * tendToTargetSpeed * Time.fixedDeltaTime).ToString());
-		if (Mathf.Abs(target - goodness) >= tendToTargetSpeed * Time.fixedDeltaTime) {
-			goodness += Mathf.Sign(target - goodness) * tendToTargetSpeed * Time.fixedDeltaTime;
-		} else {
-			goodness = target;
-		}
-		target *= neutralFrictionFactor;
-		// goodness += Mathf.Sign(0f - goodness) * tendToNeutralSpeed * Time.fixedDeltaTime;
-		goodness = Mathf.Clamp(goodness, -1f, 1f);
+		// // Debug.Log("GoodnessChange: "+(Mathf.Sign(target - goodness) * tendToTargetSpeed * Time.fixedDeltaTime).ToString());
+		// if (Mathf.Abs(target - goodness) >= tendToTargetSpeed * Time.fixedDeltaTime) {
+		// 	goodness += Mathf.Sign(target - goodness) * tendToTargetSpeed * Time.fixedDeltaTime;
+		// } else {
+		// 	goodness = target;
+		// }
+		// target *= neutralFrictionFactor;
+		// // goodness += Mathf.Sign(0f - goodness) * tendToNeutralSpeed * Time.fixedDeltaTime;
+		// goodness = Mathf.Clamp(goodness, -1f, 1f);
 
-		target = Mathf.Clamp(target, -2f, 2f);
+		// target = Mathf.Clamp(target, -2f, 2f);
 
-		if (goodness >= 0f) {
-			myCamera.backgroundColor = ColorExtensions.Slerp(neutralColor, goodColor, goodness);
+		// if (goodness >= 0f) {
+		// 	myCamera.backgroundColor = ColorExtensions.Slerp(neutralColor, goodColor, goodness);
+		// } else {
+		// 	myCamera.backgroundColor = ColorExtensions.Slerp(neutralColor, badColor, -goodness);
+		// }
+
+		if (freqTimeMetric > desiredTime + temporalRange/2f) {
+			myCamera.backgroundColor = ColorExtensions.Slerp(goodColor, badColor, Mathf.Clamp01((freqTimeMetric - desiredTime - temporalRange/2f)/(desiredTime+visualizationRange)));
 		} else {
-			myCamera.backgroundColor = ColorExtensions.Slerp(neutralColor, badColor, -goodness);
+			myCamera.backgroundColor = ColorExtensions.Slerp(neutralColor, goodColor, Mathf.Clamp01(freqTimeMetric/(desiredTime - temporalRange/2f)));
 		}
 	}
 
