@@ -12,9 +12,7 @@ public class MenuNavigation : MonoBehaviour {
 
 	void Update () {
 		if (Input.anyKeyDown) {
-			for (int i = 0; i < rockingTacos.Count; i++) {
-				rockingTacos[i].StartGame();
-			}
+			GameManager.g.StartGame();
 			Destroy(menuCamera);
 		}
 	}

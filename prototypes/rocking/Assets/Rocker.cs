@@ -5,11 +5,9 @@ public class Rocker : MonoBehaviour {
 	[SerializeField]
 	private string controlAxis;
 
-	[SerializeField]
-	private Transform shrimpSpawnLocation;
-
-	[SerializeField]
-	private GameObject shrimpPrefab;
+	public void SetControlAxis (string axis) {
+		controlAxis = axis;
+	}
 
 	[SerializeField]
 	private bool invertRotation = true;
@@ -30,16 +28,13 @@ public class Rocker : MonoBehaviour {
 	private AnimationCurve rotationGravityCurve;
 
 	[SerializeField]
-	private DebugReadout speedReadout;
+	private AnimationCurve scoreScaleCurve;
 
 	[SerializeField]
-	private DebugReadout heightReadout;
+	private AnimationCurve scorePositionCurve;
 
 	private float currRotationSpeed = 0f;
 	private float currRotation = 0f;
-
-	[SerializeField]
-	private BackgroundVisualizer bgVisualizer;
 
 	private Transform shrimpTransform;
 
@@ -48,7 +43,6 @@ public class Rocker : MonoBehaviour {
 
 	void OnEnable () {
 		myTransform = transform;
-		// speedReadout.HighestValue = maxRotSpeed;
 	}
 
 	private bool measuredLeftHeight = false;
@@ -159,7 +153,27 @@ public class Rocker : MonoBehaviour {
 	}
 
 	private float speedAtBottom = 0f;
+	private float evaluationMetric = 0f;
+
+	public float EvaluationMetric {
+		get { return evaluationMetric; }
+	}
+
+	public bool ReachedLeft {
+		get { return measuredRightHeight; }
+	}
+	public bool ReachedRight {
+		get { return measuredLeftHeight; }
+	}
+
+	public float LeftMetric = 0f;
+	public float RightMetric = 0f;
+
 	void FixedUpdate () {
+		if (!GameManager.g.IsGameRunning) {
+			return;
+		}
+
 		var horiz = Input.GetAxisRaw(controlAxis);
 		if (invertRotation) horiz *= -1;
 
@@ -175,8 +189,7 @@ public class Rocker : MonoBehaviour {
 
 		if (Predict(out minPrediction, -1f) && Predict(out neutPrediction, 0f) && Predict(out maxPrediction, 1f)) {
 			float avgMetric = (minPrediction + neutPrediction + maxPrediction)/3f;
-			bgVisualizer.SetTime(avgMetric);
-			bgVisualizer.SetFreqTime(avgMetric);
+			evaluationMetric = avgMetric;
 			// Debug.Log("Predicted Min: "+ minPrediction.ToString());
 			// Debug.Log("Predicted Neutral: "+ neutPrediction.ToString());
 			// Debug.Log("Predicted Max: "+ maxPrediction.ToString());
@@ -187,53 +200,56 @@ public class Rocker : MonoBehaviour {
 		timer += Time.fixedDeltaTime;
 
 		if (((delta >= 0f && delta < lbMaxAngle) || (delta > 180f && delta < 360f - lbMaxAngle)) && currRotationSpeed < 0f && !measuredRightHeight) {
-			bgVisualizer.SetHeight(currRotation);
-			// heightReadout.Value = currRotation;
+			// bgVisualizer.SetHeight(currRotation);
+
 			measuredRightHeight = true;
 			measuredLeftHeight = false;
 
-			// speedReadout.Value = Mathf.Abs(timer*10f);
-			// bgVisualizer.SetTime(Mathf.Abs(timer*10f));
-			// timer = 0f;
+			RightMetric = evaluationMetric;
 		}
 
 		if (((delta > 360f - lbMaxAngle && delta < 360f) || (delta > lbMaxAngle && delta < 180f)) && currRotationSpeed > 0f && !measuredLeftHeight) {
-			bgVisualizer.SetHeight(360f-currRotation);
-			// heightReadout.Value = (360f-currRotation);
+			// bgVisualizer.SetHeight(360f-currRotation);
+
 			measuredLeftHeight = true;
 			measuredRightHeight = false;
 
-			// speedReadout.Value = Mathf.Abs(timer*10f);
-			// bgVisualizer.SetTime(Mathf.Abs(timer*10f));
-
-			// timer = 0f;
+			LeftMetric = evaluationMetric;
 		}
 
 		if ((currRotation > 0f && currRotation + currRotationSpeed * Time.fixedDeltaTime <= 0f) || // bottom of swing from left
 			(currRotation < 360f && currRotation + currRotationSpeed * Time.fixedDeltaTime >= 360f)) {// bottom of swing from right
-			// Highest Speed happens at pendulum bottom
-			// speedReadout.Value = Mathf.Abs(currRotationSpeed);
 
 			speedAtBottom = currRotationSpeed;
 
-			// bgVisualizer.SetTime(Mathf.Abs(timer*10f));
 			timer = 0f;
 
 			measuredLeftHeight = false;
 			measuredRightHeight = false;
 		}
 
-		// bgVisualizer.SetFreqTime(Mathf.Abs(timer*10f));
-
 		Quaternion targetRotation = Quaternion.Euler(0, 0, currRotation);
 		myTransform.rotation = targetRotation;
 	}
 
-	public void StartGame() {
-
+	private bool isMovingToScore = false;
+	public void StartMovingToScoreAt(Vector3 position) {
+		if (!isMovingToScore) {
+			isMovingToScore = true;
+			StartCoroutine(MoveToScoreAt(position));
+		}
 	}
 
-	public void SpawnShrimp() {
-		Instantiate(shrimpPrefab, shrimpSpawnLocation.position, Quaternion.identity);
+	private IEnumerator MoveToScoreAt (Vector3 position) {
+		float duration = 0.6f;
+		Vector3 initialPosition = myTransform.position;
+		float elapsed = 0f;
+		YieldInstruction wait = new WaitForFixedUpdate();
+		while ((myTransform.position - position).sqrMagnitude > Mathf.Epsilon) {
+			elapsed += Time.fixedDeltaTime;
+			myTransform.position = initialPosition + scorePositionCurve.Evaluate(elapsed/duration) * (position - initialPosition);
+			myTransform.localScale = Vector3.one * scoreScaleCurve.Evaluate(elapsed/duration);
+			yield return wait;
+		}
 	}
 }
