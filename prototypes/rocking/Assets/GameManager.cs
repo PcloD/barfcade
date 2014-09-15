@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
 	[SerializeField]
 	private Camera globalCamera;
 
+	[SerializeField]
 	private float timer = 25f; // SET TIME FOR GAME HERE
 
 	[SerializeField]
@@ -235,6 +236,14 @@ public class GameManager : MonoBehaviour {
 				gameState.myMonster.transform.position = eatingCurve.Evaluate(counter/duration) * difference + initialPosition;
 			}
 		}
+
+		for (int playerIndex = 0; playerIndex < gameStates.Length; playerIndex++) {
+			GameState gameState = gameStates[playerIndex];
+			Vector3 initialPosition = initialPositions[playerIndex];
+			Vector3 screenCoords = globalCamera.ScreenToWorldPoint(new Vector3(Screen.width * playerIndex, 0, globalCamera.nearClipPlane)); // XXX: SUPER BAD HACK
+			gameState.myMonster.transform.position = new Vector3(screenCoords.x, initialPosition.y, initialPosition.z);
+		}
+
 		yield return StartCoroutine(EatTacos ());
 	}
 
@@ -248,6 +257,7 @@ public class GameManager : MonoBehaviour {
 		float counter = 0f;
 		float duration = 2f;
 		List<Vector3[]> initialPositions = new List<Vector3[]>();
+		float[] priorMouthFractions = new float[gameStates.Length];
 		for (int playerIndex = 0; playerIndex < gameStates.Length; playerIndex++) {
 
 			GameState gameState = gameStates[playerIndex];
@@ -278,25 +288,22 @@ public class GameManager : MonoBehaviour {
 
 		while (counter < duration) {
 			yield return wait;
+			counter += Time.fixedDeltaTime;
 			float checkpointFraction = 0.5f;
 			for (int playerIndex = 0; playerIndex < gameStates.Length; playerIndex++) {
 				GameState gameState = gameStates[playerIndex];
-				counter += Time.fixedDeltaTime;
 				for (int tacoIndex = 0; tacoIndex < gameState.scoreTacos.Count; tacoIndex++) {
-					float fraction = counter/(duration - tacoIndex * duration/(gameState.scoreTacos.Count));
+					float fraction = counter/(duration - tacoIndex * duration/gameState.scoreTacos.Count);
 					Vector3 initialPosition;
 					Vector3 checkpoint = gameState.myMonsterMouthCheckpoint.position;
 					Vector3 mouth = gameState.myMonsterMouth.position;
 					Vector3 difference;
 					if (fraction >= checkpointFraction) {
 						float consumeFraction = (fraction-checkpointFraction)/(1f-checkpointFraction);
-						// if (playerIndex == 1) {
-						// 	Debug.Log(consumeFraction);
-						// }
-						float mouthFraction = Mathf.Repeat(consumeFraction,1f);//(fraction/gameState.scoreTacos.Count)/((1f - checkpointFraction)/gameState.scoreTacos.Count);
-						float rotDifference = gameState.openRotation - gameState.closedRotation;
-						Quaternion targetRotation = Quaternion.Euler(0, 0, eatingCurve.Evaluate(mouthFraction) * rotDifference + gameState.closedRotation);
-						gameState.myMonsterMandible.rotation = targetRotation;
+						// float mouthFraction = Mathf.Repeat(consumeFraction,1f);
+						// float rotDifference = gameState.openRotation - gameState.closedRotation;
+						// Quaternion targetRotation = Quaternion.Euler(0, 0, eatingCurve.Evaluate(mouthFraction) * rotDifference + gameState.closedRotation);
+						// gameState.myMonsterMandible.rotation = targetRotation;
 						difference = (mouth - checkpoint);
 						gameState.scoreTacos[tacoIndex].transform.position = eatingCurve.Evaluate(consumeFraction) * difference + checkpoint;
 					} else {
@@ -305,6 +312,15 @@ public class GameManager : MonoBehaviour {
 						gameState.scoreTacos[tacoIndex].transform.position = eatingCurve.Evaluate(fraction/checkpointFraction) * difference + initialPosition;
 					}
 				}
+
+				// if (counter/duration >= checkpointFraction) {
+				// 	float consumeFraction = (counter - (duration * checkpointFraction))/duration;
+				// 	float mouthFraction = Mathf.Repeat(consumeFraction,(counter - (duration * checkpointFraction))/gameState.scoreTacos.Count);
+				// 	float rotDifference = gameState.openRotation - gameState.closedRotation;
+				// 	Quaternion targetRotation = Quaternion.Euler(0, 0, eatingCurve.Evaluate(mouthFraction) * rotDifference + gameState.closedRotation);
+				// 	gameState.myMonsterMandible.rotation = targetRotation;
+				// }
+
 			}
 		}
 

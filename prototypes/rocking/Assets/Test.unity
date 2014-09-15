@@ -275,7 +275,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 184855111}
   - 212: {fileID: 184855110}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: teeth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 188299652}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: checkpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 195816894}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 215202776}
   - 212: {fileID: 215202775}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: teeth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,6 +532,38 @@ Prefab:
       propertyPath: gameStates.Array.data[1].myRocker
       value: 
       objectReference: {fileID: 1769611345}
+    - target: {fileID: 100014, guid: 9289da2e1d6734b4f8456cbf5d75c0b2, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 9289da2e1d6734b4f8456cbf5d75c0b2, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: 9289da2e1d6734b4f8456cbf5d75c0b2, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 9289da2e1d6734b4f8456cbf5d75c0b2, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: 9289da2e1d6734b4f8456cbf5d75c0b2, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 9289da2e1d6734b4f8456cbf5d75c0b2, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 9289da2e1d6734b4f8456cbf5d75c0b2, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 9289da2e1d6734b4f8456cbf5d75c0b2, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9289da2e1d6734b4f8456cbf5d75c0b2, type: 2}
   m_RootGameObject: {fileID: 1951153603}
@@ -2595,7 +2627,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1605784998}
   - 212: {fileID: 1605784999}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: leftMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2820,7 +2852,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1662679228}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3030,7 +3062,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1736798679}
   - 212: {fileID: 1736798680}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: rightMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3321,7 +3353,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1863175601}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: checkpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
