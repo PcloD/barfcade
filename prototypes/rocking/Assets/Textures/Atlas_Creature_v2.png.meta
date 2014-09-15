@@ -3,6 +3,8 @@ guid: ba753736e12d5412794ec5a5db3d8fab
 TextureImporter:
   fileIDToRecycleName:
     21300000: Atlas_Creature_v2
+    21300002: rightMonster
+    21300004: rightMonster_teeth
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,13 +28,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -43,6 +45,26 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: rightMonster
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 0
+        width: 1057
+        height: 1744
+      alignment: 5
+      pivot: {x: 1, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rightMonster_teeth
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 35
+        width: 834
+        height: 472
+      alignment: 9
+      pivot: {x: .878769934, y: .695449829}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

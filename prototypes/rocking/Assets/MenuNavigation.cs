@@ -5,15 +5,12 @@ using System.Collections.Generic;
 public class MenuNavigation : MonoBehaviour {
 
 	[SerializeField]
-	private Camera menuCamera;
-
-	[SerializeField]
-	private List<Rocker> rockingTacos = new List<Rocker>();
+	private GameObject menu;
 
 	void Update () {
 		if (Input.anyKeyDown) {
 			GameManager.g.StartGame();
-			Destroy(menuCamera);
+			Destroy(menu);
 		}
 	}
 }
